@@ -1,11 +1,14 @@
 imports:
     - { resource: config.yml }
+    - { resource: parameters_heroku.yml }
 
 framework:
     router:
         resource: "%kernel.root_dir%/config/routing_heroku.yml"
         strict_requirements: true
     profiler: { only_exceptions: false }
+    session:
+       handler_id: session.handler.memcache
 
 web_profiler:
     toolbar: true
@@ -29,3 +32,13 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+services:
+    session.memcache:
+        class: Memcache
+        calls:
+            - [ addServer, [ %session_memcache_host%, %session_memcache_port% ]]
+
+    session.handler.memcache:
+        class: Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcacheSessionHandler
+        arguments: [ @session.memcache, { prefix: %session_memcache_prefix%, expiretime: %session_memcache_expire% }]
