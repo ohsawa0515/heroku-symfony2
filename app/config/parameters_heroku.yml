@@ -12,7 +12,7 @@ parameters:
     locale: ja
     secret: ThisTokenIsNotSoSecretChangeIt
 
-    //session_memcache_host: localhost
-    //session_memcache_port: 11211
-    //session_memcache_prefix: heroku
-    //session_memcache_expire: 3600
+    session_memcached_host: ENV['MEMCACHIER_SERVERS']
+    session_memcached_port: 11211
+    session_memcached_prefix: heroku
+    session_memcached_expire: 3600
