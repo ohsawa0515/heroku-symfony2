@@ -7,8 +7,8 @@ framework:
         resource: "%kernel.root_dir%/config/routing_heroku.yml"
         strict_requirements: true
     profiler: { only_exceptions: false }
-#    session:
-#       handler_id: session.handler.memcached
+    session:
+       handler_id: session.handler.memcached
 
 web_profiler:
     toolbar: true
@@ -41,4 +41,4 @@ assetic:
 
 #    session.handler.memcached:
 #        class: Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler
-#        arguments: [ @session.memcached, { prefix: %session_memcached_prefix%, expiretime: %session_memcached_expire% }]
+#       arguments: [ @session.memcached, { prefix: %session_memcached_prefix%, expiretime: %session_memcached_expire% }]
