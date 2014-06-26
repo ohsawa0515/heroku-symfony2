@@ -8,6 +8,8 @@ class WelcomeController extends Controller
 {
     public function indexAction()
     {
+        echo file_get_contents(__DIR__. '/../../../../app/config/parameters.yml');
+        exit;
         /*
          * The action's view can be rendered using render() method
          * or @Template annotation as demonstrated in DemoController.
