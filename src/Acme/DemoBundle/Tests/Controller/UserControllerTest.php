@@ -6,9 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class UserControllerTest extends WebTestCase
 {
-    /*
+    
     public function testCompleteScenario()
     {
+        $this->markTestIncomplete(
+          'This test has not been implemented yet.'
+        );
+ 
         // Create a new client to browse the application
         $client = static::createClient();
 
@@ -50,6 +54,4 @@ class UserControllerTest extends WebTestCase
         // Check the entity has been delete on the list
         $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
     }
-
-    */
 }
