@@ -6,3 +6,7 @@ php:
 before_script: composer install -n
 
 script: phpunit -c app
+
+deploy:
+  provider: heroku
+  api_key: M7xGIeYDIZVCC+Fv5bnIUiQUeZypq+omekov23h3ZdlSl9R8awP5t2RMuoIjotSA1CQ4fK5b2OAYXGxgjYHf6h/irjbSEvNgolbrzgVITdSQ727m/dIDdoOCpYoNbfcAD6bRxoVVjNZpqCH4wmxAZ9mH7EQgOBZcbDQ2GIzdIOo=
