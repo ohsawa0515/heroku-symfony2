@@ -1,13 +1,10 @@
 language: php
-
 php:
-  - 5.5
-
+- 5.5
 before_script: composer install -n
-
 script: phpunit -c app
-
 deploy:
   provider: heroku
+  app: heroku-symfony2-test0515
   api_key:
-    secure: M7xGIeYDIZVCC+Fv5bnIUiQUeZypq+omekov23h3ZdlSl9R8awP5t2RMuoIjotSA1CQ4fK5b2OAYXGxgjYHf6h/irjbSEvNgolbrzgVITdSQ727m/dIDdoOCpYoNbfcAD6bRxoVVjNZpqCH4wmxAZ9mH7EQgOBZcbDQ2GIzdIOo=
+    secure: bJH959wQ5mckutG6deDLdOMe4MkDks6NtOBxVKdhaglLyFepSKD1n3DkAZiX1xdPWAfFkORZWgRSFifjJGdEPFa1U7Ds0X4LiO8OziEhlaaoAF3rhG0OF9E04TxF7s20O735ExMrXa7L0N/YVgsvNgYjCrNtNahXwBeoI/urh+M=
