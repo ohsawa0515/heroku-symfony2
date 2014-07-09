@@ -14,15 +14,15 @@ before_script: composer install -n --dev
 script:
   - mkdir -p build/logs
   - phpunit -c app
-  - php vendor/bin/coveralls -v
+#  - php vendor/bin/coveralls -v
 
 after_script:
   - php vendor/bin/coveralls -v
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: bJH959wQ5mckutG6deDLdOMe4MkDks6NtOBxVKdhaglLyFepSKD1n3DkAZiX1xdPWAfFkORZWgRSFifjJGdEPFa1U7Ds0X4LiO8OziEhlaaoAF3rhG0OF9E04TxF7s20O735ExMrXa7L0N/YVgsvNgYjCrNtNahXwBeoI/urh+M=
-  app:
-    #master: heroku-symfony2-test0515
-    develop: heroku-symfony2-test0515
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: bJH959wQ5mckutG6deDLdOMe4MkDks6NtOBxVKdhaglLyFepSKD1n3DkAZiX1xdPWAfFkORZWgRSFifjJGdEPFa1U7Ds0X4LiO8OziEhlaaoAF3rhG0OF9E04TxF7s20O735ExMrXa7L0N/YVgsvNgYjCrNtNahXwBeoI/urh+M=
+#  app:
+#    #master: heroku-symfony2-test0515
+#    develop: heroku-symfony2-test0515
