@@ -7,6 +7,11 @@ before_script: composer install -n
 
 script: phpunit -c app
 
+branches:
+  only:
+    - master
+    - develop
+
 deploy:
   provider: heroku
   api_key:
