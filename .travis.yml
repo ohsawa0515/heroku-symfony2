@@ -16,8 +16,8 @@ script:
   - phpunit -c app
   - php vendor/bin/coveralls -v
 
-after_script:
-  - php vendor/bin/coveralls -v
+#after_script:
+#  - php vendor/bin/coveralls -v
 
 deploy:
   provider: heroku
