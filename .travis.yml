@@ -15,7 +15,7 @@ script:
   - mkdir -p build/logs
   - phpunit -c app
   - php vendor/bin/coveralls -v
-  - php security-checker security:check ./composer.lock
+  - php security-checker.phar security:check ./composer.lock
 
 #after_script:
 #  - php vendor/bin/coveralls -v
