@@ -3,6 +3,12 @@
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
+ini_set('session.save_handler', 'memcached');
+ini_set('session.save_path', 'PERSISTENT=pool ' . getenv('MEMCACHIER_SERVERS'));
+ini_set('memcached.sess_binary', 1);
+ini_set('memcached.sess_sasl_username', getenv('MEMCACHIER_USERNAME'));
+ini_set('memcached.sess_sasl_password', getenv('MEMCACHIER_PASSWORD'));
+
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
 //umask(0000);
